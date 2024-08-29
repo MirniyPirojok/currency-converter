@@ -37,6 +37,17 @@ h1 {
     font-weight: 600;
 }
 
+/* Description styles */
+.app-description {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    padding: 10px;
+    border-left: 4px solid #0077cc;
+    background-color: #eef7ff;
+}
+
 /* Form styles */
 form {
     display: flex;
