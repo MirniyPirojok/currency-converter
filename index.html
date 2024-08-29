@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Convert currency to GEL</h1>
+        <form id="converter-form">
+            <label for="income">Income Amount:</label>
+            <input type="number" id="income" required>
+
+            <label for="income-currency">Income Currency:</label>
+            <select id="income-currency" required>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="RUB">RUB</option>
+            </select>
+
+            <label for="income-date">Income Date:</label>
+            <input type="date" id="income-date" required>
+
+            <label for="yearly-income">Yearly Income in GEL:</label>
+            <input type="number" id="yearly-income">
+
+            <button type="submit">Calculate</button>
+        </form>
+
+        <div id="results">
+            <p>
+                Income in GEL: 
+                <span id="converted-amount" class="copyable">-</span>
+                <span id="converted-amount-msg" class="copy-msg" style="display:none;">Copied!</span>
+            </p>
+            <p>
+                Total Yearly Income in GEL: 
+                <span id="total-yearly-income" class="copyable">-</span>
+                <span id="total-yearly-income-msg" class="copy-msg" style="display:none;">Copied!</span>
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
