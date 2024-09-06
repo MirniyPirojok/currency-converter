@@ -81,6 +81,46 @@ select:focus {
     outline: none;
 }
 
+/* Income-entry styles */
+.income-entry {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.income-entry label {
+    margin-right: 10px;
+}
+
+.income-entry input, .income-entry select {
+    margin-right: 20px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Add Income */
+#add-income {
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: transparent;
+    border: 2px solid #007bff; /* Голубой обод */
+    color: #007bff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+#add-income:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Легкий голубой оттенок при наведении */
+    color: #0056b3; /* Темнее при наведении */
+}
+
+#add-income:active {
+    transform: scale(0.98); /* Небольшая анимация при нажатии */
+}
+
 /* Button styles */
 button {
     padding: 12px;
@@ -129,7 +169,7 @@ button:active {
     color: blueviolet;
     font-size: 0.9em;
     margin-left: 10px;
-    display: none; /* Скрыто по умолчанию */
+    display: none; /* Initially hidden */
 }
 
 /* Responsive design */
