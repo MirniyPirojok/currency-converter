@@ -17,8 +17,7 @@
         <form id="converter-form">
             <div id="income-entries">
                 <div class="income-entry">
-                    <label>Income:</label>
-                    <input type="number" step="0.01" class="income-amount" required>
+                    <input type="number" step="0.01" class="income-amount" placeholder="Enter Income" required>
                     <select class="income-currency" required>
                         <option value="USD">USD</option>
                         <option value="EUR">EUR</option>
@@ -30,8 +29,7 @@
 
             <button type="button" id="add-income">+Add Income</button>
 
-            <label for="yearly-income">Yearly Income in GEL:</label>
-            <input type="number" step="0.01" id="yearly-income" required>
+            <input type="number" step="0.01" id="yearly-income" placeholder="Enter Yearly Income in GEL"  required>
 
             <button type="submit">Calculate</button>
         </form>
@@ -40,12 +38,12 @@
             <p>
                 Income in GEL: 
                 <span id="converted-amount" class="copyable">-</span>
-                <span id="converted-amount-msg" class="copy-msg" style="display:none;">Copied</span>
+                <span id="converted-amount-msg" class="copy-msg" style="display:none;">copied</span>
             </p>
             <p>
                 Total Yearly Income in GEL: 
                 <span id="total-yearly-income" class="copyable">-</span>
-                <span id="total-yearly-income-msg" class="copy-msg" style="display:none;">Copied</span>
+                <span id="total-yearly-income-msg" class="copy-msg" style="display:none;">copied</span>
             </p>
         </div>
     </div>

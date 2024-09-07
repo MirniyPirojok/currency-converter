@@ -5,16 +5,21 @@ document.getElementById('add-income').addEventListener('click', () => {
     const newIncomeEntry = document.createElement('div');
     newIncomeEntry.classList.add('income-entry');
     newIncomeEntry.innerHTML = `
-        <label>Income:</label>
-        <input type="number" step="0.01" class="income-amount" required>
+        <input type="number" step="0.01" class="income-amount" placeholder="Enter income" required>
         <select class="income-currency" required>
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
             <option value="RUB">RUB</option>
         </select>
         <input type="date" class="income-date" required>
+        <button type="button" class="remove-income">—</button>
     `;
     incomeEntries.appendChild(newIncomeEntry);
+
+    // Add event listener to the remove button
+    newIncomeEntry.querySelector('.remove-income').addEventListener('click', () => {
+        incomeEntries.removeChild(newIncomeEntry);
+    });
 });
 
 document.getElementById('converter-form').addEventListener('submit', async (event) => {

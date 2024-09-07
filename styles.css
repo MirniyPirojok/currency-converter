@@ -52,13 +52,7 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-}
-
-/* Label styles */
-label {
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #2c3e50;
+    row-gap: 10px;
 }
 
 /* Input and select styles */
@@ -66,7 +60,6 @@ input[type="number"],
 input[type="date"],
 select {
     padding: 12px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
@@ -83,20 +76,11 @@ select:focus {
 
 /* Income-entry styles */
 .income-entry {
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px 100px 150px 50px;
+    gap: 10px;
     align-items: center;
     margin-bottom: 10px;
-}
-
-.income-entry label {
-    margin-right: 10px;
-}
-
-.income-entry input, .income-entry select {
-    margin-right: 20px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
 }
 
 /* Button Add Income */
@@ -119,6 +103,27 @@ select:focus {
 
 #add-income:active {
     transform: scale(0.98); /* Небольшая анимация при нажатии */
+}
+
+/* Button for removing an entry */
+.remove-income {
+    background-color: transparent;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.remove-income:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #b30000;
+}
+
+.remove-income:active {
+    transform: scale(0.98);
 }
 
 /* Button styles */
@@ -166,7 +171,7 @@ button:active {
 }
 
 .copy-msg {
-    color: blueviolet;
+    color: red;
     font-size: 0.9em;
     margin-left: 10px;
     display: none; /* Initially hidden */
@@ -186,6 +191,19 @@ button:active {
     input[type="date"],
     select,
     button {
-        font-size: 14px;
+        font-size: 10px;
+    }
+
+    .income-entry {
+        display: grid;
+        grid-template-columns: 100px 70px 100px 25px;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .remove-income {
+        padding: 5px 5px;
+        margin-left: 0px;
     }
 }
