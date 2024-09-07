@@ -52,13 +52,7 @@ h1 {
 form {
     display: flex;
     flex-direction: column;
-}
-
-/* Label styles */
-label {
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: #2c3e50;
+    row-gap: 10px;
 }
 
 /* Input and select styles */
@@ -66,7 +60,6 @@ input[type="number"],
 input[type="date"],
 select {
     padding: 12px;
-    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 16px;
@@ -79,6 +72,58 @@ select:focus {
     border-color: #007bff;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
     outline: none;
+}
+
+/* Income-entry styles */
+.income-entry {
+    display: grid;
+    grid-template-columns: 200px 100px 150px 50px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* Button Add Income */
+#add-income {
+    margin-bottom: 10px;
+    padding: 12px;
+    background-color: transparent;
+    border: 2px solid #007bff; /* Голубой обод */
+    color: #007bff;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+#add-income:hover {
+    background-color: rgba(0, 123, 255, 0.1); /* Легкий голубой оттенок при наведении */
+    color: #0056b3; /* Темнее при наведении */
+}
+
+#add-income:active {
+    transform: scale(0.98); /* Небольшая анимация при нажатии */
+}
+
+/* Button for removing an entry */
+.remove-income {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    padding: 10px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.remove-income:hover {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #b30000;
+}
+
+.remove-income:active {
+    transform: scale(0.98);
 }
 
 /* Button styles */
@@ -126,10 +171,10 @@ button:active {
 }
 
 .copy-msg {
-    color: blueviolet;
+    color: red;
     font-size: 0.9em;
     margin-left: 10px;
-    display: none; /* Скрыто по умолчанию */
+    display: none; /* Initially hidden */
 }
 
 /* Responsive design */
@@ -146,6 +191,19 @@ button:active {
     input[type="date"],
     select,
     button {
-        font-size: 14px;
+        font-size: 10px;
+    }
+
+    .income-entry {
+        display: grid;
+        grid-template-columns: 100px 70px 100px 25px;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .remove-income {
+        padding: 5px 5px;
+        margin-left: 0px;
     }
 }
