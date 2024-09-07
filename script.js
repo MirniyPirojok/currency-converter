@@ -5,7 +5,7 @@ document.getElementById('add-income').addEventListener('click', () => {
     const newIncomeEntry = document.createElement('div');
     newIncomeEntry.classList.add('income-entry');
     newIncomeEntry.innerHTML = `
-        <input type="number" step="0.01" class="income-amount" placeholder="Enter income" required>
+        <input type="number" step="0.01" class="income-amount" placeholder="Enter Income" required>
         <select class="income-currency" required>
             <option value="USD">USD</option>
             <option value="EUR">EUR</option>
