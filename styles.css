@@ -28,6 +28,15 @@ body {
     border: 1px solid #e0e0e0;
 }
 
+/* Heading styles */
+h1 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2c3e50;
+    text-align: center;
+    font-weight: 600;
+}
+
 /* Description styles */
 .app-description {
     font-size: 14px;
@@ -99,8 +108,8 @@ select:focus {
 /* Button for removing an entry */
 .remove-income {
     background-color: transparent;
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #ff0000;
+    color: #ff0000;
     padding: 10px 10px;
     border-radius: 20px;
     cursor: pointer;
@@ -164,43 +173,37 @@ button:active {
 .copy-msg {
     color: red;
     font-size: 0.9em;
-    margin-left: 5px;
+    margin-left: 10px;
     display: none; /* Initially hidden */
 }
 
 /* Responsive design */
 @media (max-width: 600px) {
     .container {
-        padding: 10px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
     }
 
     input[type="number"],
     input[type="date"],
     select,
     button {
-        font-size: 15px;
-        padding: 5px;
+        font-size: 10px;
     }
 
     .income-entry {
         display: grid;
         grid-template-columns: 100px 70px 100px 25px;
-        gap: 5px;
+        gap: 10px;
         align-items: center;
         margin-bottom: 10px;
     }
 
     .remove-income {
-        padding: 2px 0px;
+        padding: 5px 5px;
         margin-left: 0px;
-    }
-
-    #add-income {
-        padding: 5px;
-        font-size: 15px;
-    }
-
-    #results p {
-        font-size: 15px;
     }
 }
