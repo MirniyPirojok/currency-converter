@@ -185,7 +185,7 @@ button:active {
 
     .income-entry {
         display: grid;
-        grid-template-columns: 100px 70px 80px 25px;
+        grid-template-columns: 100px 70px 100px 25px;
         gap: 5px;
         align-items: center;
         margin-bottom: 10px;
