@@ -1,3 +1,5 @@
+const calendarToday = document.querySelector('.income-date').value = formatDate(new Date());
+
 document.getElementById('add-income').addEventListener('click', () => {
     const incomeEntries = document.getElementById('income-entries');
     
@@ -25,11 +27,12 @@ document.getElementById('add-income').addEventListener('click', () => {
 document.getElementById('converter-form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
+    const currentDate = new Date();
+    const minDate = new Date('2016-01-01');
+
     const incomeEntries = document.querySelectorAll('.income-entry');
     const yearlyIncomeGEL = parseFloat(document.getElementById('yearly-income').value) || 0;
     let totalConvertedAmount = 0;
-    const currentDate = new Date();
-    const minDate = new Date('2016-01-01');
 
     for (const entry of incomeEntries) {
         const incomeCurrency = entry.querySelector('.income-currency').value.toUpperCase();
@@ -78,14 +81,6 @@ document.getElementById('converter-form').addEventListener('submit', async (even
     document.getElementById('total-yearly-income').textContent = totalYearlyIncome.toFixed(2);
 });
 
-function formatDate(inputDate) {
-    const date = new Date(inputDate);
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
-    return `${year}-${month}-${day}`;
-}
-
 // Add copy to clipboard functionality
 document.getElementById('converted-amount').addEventListener('click', (event) => {
     copyToClipboard(event);
@@ -94,6 +89,14 @@ document.getElementById('converted-amount').addEventListener('click', (event) =>
 document.getElementById('total-yearly-income').addEventListener('click', (event) => {
     copyToClipboard(event);
 });
+
+function formatDate(inputDate) {
+    const date = new Date(inputDate);
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
 
 function copyToClipboard(event) {
     navigator.clipboard.writeText(event.target.textContent).then(() => {
