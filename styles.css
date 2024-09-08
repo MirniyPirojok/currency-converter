@@ -85,6 +85,7 @@ select:focus {
 
 /* Button Add Income */
 #add-income {
+    width: fit-content;
     margin-bottom: 10px;
     padding: 12px;
     background-color: transparent;
@@ -180,7 +181,7 @@ button:active {
 /* Responsive design */
 @media (max-width: 600px) {
     .container {
-        padding: 20px;
+        padding: 5px;
     }
 
     h1 {
@@ -191,31 +192,29 @@ button:active {
     input[type="date"],
     select,
     button {
+        font-size: 15px;
         padding: 5px;
-        font-size: 12px;
     }
 
     .income-entry {
         display: grid;
         grid-template-columns: 100px 70px 100px 25px;
-        gap: 10px;
+        gap: 5px;
         align-items: center;
         margin-bottom: 10px;
     }
 
     .remove-income {
-        padding: 5px 5px;
+        padding: 2px 0px;
         margin-left: 0px;
     }
 
     #add-income {
         padding: 5px;
-        font-size: 12px;
+        font-size: 15px;
     }
 
     #results p {
-        margin-bottom: 12px;
         font-size: 15px;
-        color: #34495e;
     }
 }
