@@ -28,15 +28,6 @@ body {
     border: 1px solid #e0e0e0;
 }
 
-/* Heading styles */
-h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #2c3e50;
-    text-align: center;
-    font-weight: 600;
-}
-
 /* Description styles */
 .app-description {
     font-size: 14px;
@@ -85,6 +76,7 @@ select:focus {
 
 /* Button Add Income */
 #add-income {
+    width: fit-content;
     margin-bottom: 10px;
     padding: 12px;
     background-color: transparent;
@@ -108,8 +100,8 @@ select:focus {
 /* Button for removing an entry */
 .remove-income {
     background-color: transparent;
-    border: 2px solid #ff0000;
-    color: #ff0000;
+    border: 2px solid #007bff;
+    color: #007bff;
     padding: 10px 10px;
     border-radius: 20px;
     cursor: pointer;
@@ -181,10 +173,6 @@ button:active {
 @media (max-width: 600px) {
     .container {
         padding: 20px;
-    }
-
-    h1 {
-        font-size: 24px;
     }
 
     input[type="number"],
