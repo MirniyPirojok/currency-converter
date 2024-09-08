@@ -28,15 +28,6 @@ body {
     border: 1px solid #e0e0e0;
 }
 
-/* Heading styles */
-h1 {
-    margin-bottom: 20px;
-    font-size: 28px;
-    color: #2c3e50;
-    text-align: center;
-    font-weight: 600;
-}
-
 /* Description styles */
 .app-description {
     font-size: 14px;
@@ -181,11 +172,7 @@ button:active {
 /* Responsive design */
 @media (max-width: 600px) {
     .container {
-        padding: 5px;
-    }
-
-    h1 {
-        font-size: 24px;
+        padding: 10px;
     }
 
     input[type="number"],
@@ -198,7 +185,7 @@ button:active {
 
     .income-entry {
         display: grid;
-        grid-template-columns: 100px 70px 100px 25px;
+        grid-template-columns: 100px 70px 80px 25px;
         gap: 5px;
         align-items: center;
         margin-bottom: 10px;
