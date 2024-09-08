@@ -165,7 +165,7 @@ button:active {
 .copy-msg {
     color: red;
     font-size: 0.9em;
-    margin-left: 10px;
+    margin-left: 5px;
     display: none; /* Initially hidden */
 }
 
