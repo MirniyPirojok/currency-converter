@@ -1,5 +1,3 @@
-const calendarToday = document.querySelector('.income-date').value = formatDate(new Date());
-
 document.getElementById('add-income').addEventListener('click', () => {
     const incomeEntries = document.getElementById('income-entries');
     
@@ -13,7 +11,7 @@ document.getElementById('add-income').addEventListener('click', () => {
             <option value="EUR">EUR</option>
             <option value="RUB">RUB</option>
         </select>
-        <input type="date" class="income-date" value="${calendarToday}" required>
+        <input type="date" class="income-date" required>
         <button type="button" class="remove-income">—</button>
     `;
     incomeEntries.appendChild(newIncomeEntry);
