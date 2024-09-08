@@ -13,7 +13,7 @@ document.getElementById('add-income').addEventListener('click', () => {
             <option value="EUR">EUR</option>
             <option value="RUB">RUB</option>
         </select>
-        <input type="date" class="income-date" required>
+        <input type="date" class="income-date" value="${calendarToday}" required>
         <button type="button" class="remove-income">—</button>
     `;
     incomeEntries.appendChild(newIncomeEntry);
