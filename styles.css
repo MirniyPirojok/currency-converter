@@ -192,7 +192,8 @@ button:active {
     }
 
     .income-amount,
-    #yearly-income {
+    #yearly-income,
+    button[type="submit"] {
         font-size: 15px !important;
     }
 
