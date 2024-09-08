@@ -191,6 +191,11 @@ button:active {
         margin-bottom: 10px;
     }
 
+    .income-amount,
+    #yearly-income {
+        font-size: 15px !important;
+    }
+
     .remove-income {
         padding: 5px 5px;
         margin-left: 0px;
