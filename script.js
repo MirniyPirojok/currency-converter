@@ -28,13 +28,20 @@ document.getElementById('converter-form').addEventListener('submit', async (even
     const incomeEntries = document.querySelectorAll('.income-entry');
     const yearlyIncomeGEL = parseFloat(document.getElementById('yearly-income').value) || 0;
     let totalConvertedAmount = 0;
+    const currentDate = new Date();
+    const minDate = new Date('2016-01-01');
 
     for (const entry of incomeEntries) {
         const incomeCurrency = entry.querySelector('.income-currency').value.toUpperCase();
         const income = parseFloat(entry.querySelector('.income-amount').value);
-        const incomeDate = entry.querySelector('.income-date').value;
+        const incomeDate = new Date(entry.querySelector('.income-date').value);
 
-        if (!income || !incomeCurrency || !incomeDate) {
+        if (incomeDate > currentDate || incomeDate < minDate) {
+            alert(`Date must be between ${minDate.toISOString().split('T')[0]} and today's date.`);
+            return;
+        }
+
+        if (!income || !incomeCurrency) {
             alert("Please fill all fields correctly.");
             return;
         }
