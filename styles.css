@@ -76,7 +76,6 @@ select:focus {
 
 /* Button Add Income */
 #add-income {
-    width: fit-content;
     margin-bottom: 10px;
     padding: 12px;
     background-color: transparent;
