@@ -173,7 +173,7 @@ button:active {
 .copy-msg {
     color: red;
     font-size: 0.9em;
-    margin-left: 10px;
+    margin-left: 5px;
     display: none; /* Initially hidden */
 }
 
@@ -191,7 +191,8 @@ button:active {
     input[type="date"],
     select,
     button {
-        font-size: 10px;
+        padding: 5px;
+        font-size: 12px;
     }
 
     .income-entry {
@@ -205,5 +206,16 @@ button:active {
     .remove-income {
         padding: 5px 5px;
         margin-left: 0px;
+    }
+
+    #add-income {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    #results p {
+        margin-bottom: 12px;
+        font-size: 15px;
+        color: #34495e;
     }
 }
